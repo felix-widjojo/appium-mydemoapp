@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'appium-espresso-mydemoapp'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.18.1'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.18.1'
+    implementation group: 'io.appium', name: 'java-client', version: '9.3.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.23.0'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
